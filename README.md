@@ -1,7 +1,7 @@
 Configuração de um servidor web usando Docker.<br />
 
 Server 1:<br />
-    PHP 5.6 e Mysql 5.6<br />
+    PHP 5.6 e Mysql 5.5<br />
 
 Server 2:<br />
     PHP 7 e MariaDB<br />
