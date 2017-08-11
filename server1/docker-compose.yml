@@ -1,0 +1,18 @@
+php:
+  build: .
+  container_name: php5
+  ports:
+   - "80:80"
+   - "443:443"
+  volumes:
+   - ./www:/var/www/html
+  links:
+   - mysql   
+mysql:
+  container_name: mysql
+  image: mysql:5.5
+  volumes:
+   - /var/lib/mysql
+  environment:
+   - MYSQL_ROOT_PASSWORD=sua_senha_para_o_BD
+   - MYSQL_DATABASE=seu_primeiro_DB
