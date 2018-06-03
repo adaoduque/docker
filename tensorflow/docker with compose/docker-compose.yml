@@ -2,6 +2,8 @@ version: '2.2'
 services:
   tensorflow:
     image: 'gcr.io/tensorflow/tensorflow:latest'
+    environment:
+      - XAUTHORITY=/tmp/.docker.xauth
     build:
       context: .
       network: host
@@ -9,3 +11,5 @@ services:
       - 8888:8888
     volumes:
       - /home/adao/Projects:/notebooks/Sources
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
