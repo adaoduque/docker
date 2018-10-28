@@ -1,0 +1,27 @@
+version: "3.2"
+services:
+  php:
+    container_name: php7
+    build: './php/'
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.0
+    volumes:
+      - ./html:/var/www/html/
+  apache:
+    container_name: apache2
+    build: './apache/'
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.1
+    depends_on:
+      - php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html/   
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
