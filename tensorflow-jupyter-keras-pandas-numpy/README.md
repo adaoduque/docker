@@ -15,7 +15,7 @@ Para iniciar o container
 <br /><br />
 Para rodar o Jupyter:
 ```shellscript
-Para acessar o jupyter: http://localhost:8888
+http://localhost:8888
 ```
 
 <br />
