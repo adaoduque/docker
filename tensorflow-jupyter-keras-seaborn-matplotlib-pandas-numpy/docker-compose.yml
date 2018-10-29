@@ -1,0 +1,11 @@
+version: '2.2'
+services:
+  tensorflow:
+    image: 'gcr.io/tensorflow/tensorflow:latest'
+    build:
+      context: .
+      network: host
+    ports:
+      - 8888:8888
+    volumes:
+      - /home/adao/Projects:/notebooks/Sources
