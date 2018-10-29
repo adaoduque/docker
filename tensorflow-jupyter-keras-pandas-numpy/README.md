@@ -1,16 +1,22 @@
 # Configuração para criar um container com Tensorflow CPU
 
-<br />
+<br /><br />
 ## Para instalar o container
->docker-compose up --build
+```shellscript
+# docker-compose up --build
+```
 
-<br />
+<br /><br />
 ## Para iniciar o container
->docker-compose up
+```shellscript
+# docker-compose up
+```
 
-<br />
+<br /><br />
 ## Para rodar o Jupyter:
->Para acessar o jupyter: http://localhost:8888
+```shellscript
+Para acessar o jupyter: http://localhost:8888
+```
 
 <br />
 <br />
