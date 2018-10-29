@@ -1,16 +1,18 @@
 # Configuração para criar um container com Tensorflow CPU
-### Navegue até o diretório onde você colocou os arquivos `Dockerfile` e `docker-compose.yml`
+#### Navegue até o diretório onde você colocou os arquivos `Dockerfile` e `docker-compose.yml`
 <br />
 Para instalar o container
 ```shellscript
 # docker-compose up --build
 ```
 
+
 <br />
 Para iniciar o container
 ```shellscript
 # docker-compose up
 ```
+
 
 <br />
 Para rodar o Jupyter:
