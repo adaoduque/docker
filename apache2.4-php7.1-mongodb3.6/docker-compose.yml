@@ -1,0 +1,36 @@
+version: "3.2"
+services:
+  php:
+    container_name: php7
+    build: './php/'
+    networks:
+      static-network:
+        ipv4_address: 172.21.128.0
+    volumes:
+      - ./html:/var/www/html/
+  apache:
+    container_name: apache2
+    build: './apache/'
+    networks:
+      static-network:
+        ipv4_address: 172.21.128.1
+    depends_on:
+      - php
+      - mongodb
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html/
+  mongodb:
+    container_name: mongodb3
+    image: mongo:3.6.1
+    networks:
+      static-network:
+        ipv4_address: 172.21.128.3
+    ports:
+      - "27017:27017"
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16
