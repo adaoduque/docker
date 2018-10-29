@@ -6,17 +6,20 @@
 # docker-compose up --build
 ```
 
+
 <br />
 ## Para iniciar o container
 ```shellscript
 # docker-compose up
 ```
 
+
 <br />
 ## Para rodar o Jupyter:
 ```shellscript
 http://localhost:8888
 ```
+
 
 <br />
 <br />
