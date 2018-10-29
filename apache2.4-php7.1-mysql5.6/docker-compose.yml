@@ -1,0 +1,41 @@
+version: "3.2"
+services:
+  php:
+    container_name: php7
+    build: './php/'
+    networks:
+      static-network:
+        ipv4_address: 172.21.128.0
+    volumes:
+      - ./html:/var/www/html/
+  apache:
+    container_name: apache2
+    build: './apache/'
+    networks:
+      static-network:
+        ipv4_address: 172.21.128.1
+    depends_on:
+      - php
+      - mysql
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html/
+  mysql:
+    container_name: mysql5
+    image: mysql:5.6.40
+    networks:
+      static-network:
+        ipv4_address: 172.21.128.2
+    ports:
+      - "3306:3306"  
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=first_db
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16
