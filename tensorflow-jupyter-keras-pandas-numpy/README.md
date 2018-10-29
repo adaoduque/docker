@@ -1,15 +1,16 @@
-#Configuração para criar um container com Tensorflow CPU
+# Configuração para criar um container com Tensorflow CPU
+
 <br />
-## Para instalar o container <br />
+## Para instalar o container
 > # docker-compose up --build
 
 <br />
-## Para iniciar o container<br />
+## Para iniciar o container
 > # docker-compose up
 
 <br />
-## Para rodar o Jupyter: <br />
-> Para acessar o jupyter: http://localhost:8888<br />
+## Para rodar o Jupyter:
+> Para acessar o jupyter: http://localhost:8888
 
 <br />
 <br />
