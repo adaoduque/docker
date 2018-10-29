@@ -2,15 +2,15 @@
 
 <br />
 ## Para instalar o container
-> # docker-compose up --build
+>docker-compose up --build
 
 <br />
 ## Para iniciar o container
-> # docker-compose up
+>docker-compose up
 
 <br />
 ## Para rodar o Jupyter:
-> Para acessar o jupyter: http://localhost:8888
+>Para acessar o jupyter: http://localhost:8888
 
 <br />
 <br />
