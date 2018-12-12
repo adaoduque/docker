@@ -7,11 +7,13 @@ Levando em consideração que você já tenha instalado em sua máquina o `docke
 ```
  sudo docker-compose run web django-admin.py startproject nomedoseuprojeto .
 ```
+
 <br />
 Depois execute o comando para criar o container do django e Mysql
 ```
  sudo docker-compose up --build
 ```
+
 <br />
 ### Como conectar ao banco de dados ?
 Altere o arquivo `nomedoseuprojeto/settings.py`, na sessão DATABASE:
@@ -28,6 +30,7 @@ DATABASES = {
     }
 }
 ```
+
 <br />
 ### Para testar
 
