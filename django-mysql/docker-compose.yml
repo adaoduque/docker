@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql5
+    image: mysql:5.6.40
+    ports:
+      - "3306:3306"  
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=first_db   
+  web:
+    build: .
+    depends_on:
+      - mysql    
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
