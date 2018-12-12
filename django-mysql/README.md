@@ -3,7 +3,6 @@
 
 ### Como instalar
 Levando em consideração que você já tenha instalado em sua máquina o `docker-ce` e o `docker-compose`, navegue até o diretório onde os arquivos `docker-compose.yml`, `Dockerfile` e o `requirements.txt` estão, execute o comando para criar seu projeto:
-
 ```
  sudo docker-compose run web django-admin.py startproject nomedoseuprojeto .
 ```
@@ -14,10 +13,8 @@ Depois execute o comando para criar o container do django e Mysql
  sudo docker-compose up --build
 ```
 
-<br />
 ### Como conectar ao banco de dados ?
 Altere o arquivo `nomedoseuprojeto/settings.py`, na sessão DATABASE:
-
 ``` json
 DATABASES = {
     'default': {
@@ -31,7 +28,6 @@ DATABASES = {
 }
 ```
 
-<br />
 ### Para testar
 
 Rode a URL no browser: `http://localhost:8000/`
