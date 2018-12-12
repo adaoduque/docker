@@ -14,7 +14,7 @@ Depois execute o comando para criar o container do django e Mysql
 
 ### Como conectar ao banco de dados ?
 Altere o arquivo `nomedoseuprojeto/settings.py`, na sessão DATABASE:
-``` json
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
