@@ -9,13 +9,11 @@ Dê permissão de execução no arquivo x.sh:
 ``` shellscript
  sudo chmod +x x.sh
 ```
-<br />
+
 Depois execute o arquivo `x.sh`:
 ```
  sudo sh x.sh
 ```
-<br />
-<br />
-Duvidas, criticas ou sugestões:<br>
-E-mail: adaoduquesn@gmail.com<br>
-Telegram: @adaoDuque <br>
+Duvidas, criticas ou sugestões:
+E-mail: adaoduquesn@gmail.com
+Telegram: @adaoDuque 
